@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">v2bodetree</string>
+    <string name="stop_lock_button">unlock</string>
+    <string name="next_screen">Next</string>
+</resources>
