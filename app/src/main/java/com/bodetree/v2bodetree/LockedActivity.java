@@ -24,7 +24,6 @@ public class LockedActivity extends AppActivity{
 
     private ComponentName mAdminComponentName;
     private DevicePolicyManager mDevicePolicyManager;
-    private Button stopLockButton;
 
 
     @Override
@@ -36,7 +35,7 @@ public class LockedActivity extends AppActivity{
                 getSystemService(Context.DEVICE_POLICY_SERVICE);
 
         // Setup stop lock task button
-        stopLockButton = (Button) findViewById(R.id.stop_lock_button);
+        Button stopLockButton = (Button) findViewById(R.id.stop_lock_button);
         stopLockButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

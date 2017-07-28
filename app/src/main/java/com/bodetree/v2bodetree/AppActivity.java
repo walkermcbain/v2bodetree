@@ -26,7 +26,7 @@ public class AppActivity extends AppCompatActivity {
 
     private ComponentName mAdminComponentName;
     private DevicePolicyManager mDevicePolicyManager;
-    private Button next_screen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +61,8 @@ public class AppActivity extends AppCompatActivity {
         }
     }
 
-    //button action goes here, need a better method
-    public void onButtonClicked(View view) {
+    //button action goes here, need a better method..crashes when pressed
+    public void onClick(View view) {
         Intent intent = new Intent(this, view2.class);
         startActivity(intent);
 
