@@ -15,14 +15,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import static android.R.attr.button;
+
 //Friday work done/to do
-//solved stop lock..app crashes when pressed "unfortunately v2bodetree has stopped"...
 //solve unlockApp..with pin
 //disabled back and home buttons..codelab
 //add one view..app crashed when pressed "same as above"
 
 
 public class AppActivity extends AppCompatActivity {
+
 
     private ComponentName mAdminComponentName;
     private DevicePolicyManager mDevicePolicyManager;
@@ -44,8 +46,16 @@ public class AppActivity extends AppCompatActivity {
         else {
 
         }
+    }
+
+    //correct button code!!!!!
+    public void onButtonClicked(View view) {
+                setContentView(R.layout.view2);
 
     }
+
+
+
 
     @Override
     protected void onStart(){
@@ -61,12 +71,10 @@ public class AppActivity extends AppCompatActivity {
         }
     }
 
-    //button action goes here, need a better method..crashes when pressed
-    public void onClick(View view) {
-        Intent intent = new Intent(this, view2.class);
-        startActivity(intent);
 
-    }
+
+
+
 
 
     @Override

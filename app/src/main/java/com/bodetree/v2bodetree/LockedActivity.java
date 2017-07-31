@@ -16,12 +16,9 @@ import android.view.View;
 import android.widget.Button;
 
 
-/**
- * Created by walkermcbain on 7/28/17.
- */
-
 public class LockedActivity extends AppActivity{
 
+    public Button stopLockButton;
     private ComponentName mAdminComponentName;
     private DevicePolicyManager mDevicePolicyManager;
 
@@ -35,7 +32,7 @@ public class LockedActivity extends AppActivity{
                 getSystemService(Context.DEVICE_POLICY_SERVICE);
 
         // Setup stop lock task button
-        Button stopLockButton = (Button) findViewById(R.id.stop_lock_button);
+        stopLockButton = (Button) findViewById(R.id.stop_lock_button);
         stopLockButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,9 +126,4 @@ private void enableStayOnWhilePluggedIn(boolean enabled){
         mDevicePolicyManager.setGlobalSetting(mAdminComponentName, Settings.Global.STAY_ON_WHILE_PLUGGED_IN,"0");
         }
         }
-};
-
-
-
-
-
+}
