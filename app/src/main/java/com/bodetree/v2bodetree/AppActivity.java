@@ -15,12 +15,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import static android.R.attr.button;
 
-//Friday work done/to do
+
+
 //solve unlockApp..with pin
-//disabled back and home buttons..codelab
-//add one view..app crashed when pressed "same as above"
+
 
 
 public class AppActivity extends AppCompatActivity {
@@ -50,7 +49,9 @@ public class AppActivity extends AppCompatActivity {
 
     //correct button code!!!!!
     public void onButtonClicked(View view) {
-                setContentView(R.layout.view2);
+                //setContentView(R.layout.view2);
+        Intent intent = new Intent(this, view2.class);
+        startActivity(intent);
 
     }
 

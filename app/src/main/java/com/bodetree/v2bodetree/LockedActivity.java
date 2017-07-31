@@ -8,6 +8,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.UserManager;
@@ -69,6 +70,13 @@ public class LockedActivity extends AppActivity{
                 startLockTask();
             }
         }
+    }
+    //added on stop 31/7...restarts on crash
+    @Override
+    protected void onStop(){
+        super.onStop();
+        setContentView(R.layout.activity_app);
+
     }
 
 
