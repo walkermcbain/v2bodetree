@@ -18,7 +18,8 @@ import android.widget.Button;
 
 
 
-//solve unlockApp..with pin
+//unlock with pin on last page
+//lock to screen..add device policy manager
 
 
 
@@ -49,7 +50,6 @@ public class AppActivity extends AppCompatActivity {
 
     //correct button code!!!!!
     public void onButtonClicked(View view) {
-                //setContentView(R.layout.view2);
         Intent intent = new Intent(this, view2.class);
         startActivity(intent);
 

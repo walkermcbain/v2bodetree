@@ -21,6 +21,11 @@ public class view4 extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+
+    }
+
 }
 
 

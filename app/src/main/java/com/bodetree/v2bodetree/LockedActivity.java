@@ -71,7 +71,6 @@ public class LockedActivity extends AppActivity{
             }
         }
     }
-    //added on stop 31/7...restarts on crash
     @Override
     protected void onStop(){
         super.onStop();
