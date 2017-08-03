@@ -17,9 +17,9 @@ import android.widget.Button;
 
 
 
-
+//make swipe
 //unlock with pin on last page
-//lock to screen..add device policy manager
+//lock to screen..add device policy manager?
 
 
 
