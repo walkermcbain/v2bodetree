@@ -2,4 +2,9 @@
     <string name="app_name">v2bodetree</string>
     <string name="stop_lock_button">unlock</string>
     <string name="next_screen">Next</string>
+    <string name="video">view2</string>
+    <string name="pics">view3</string>
+    <string name="pdf">view4</string>
+    <string name="pin">view5</string>
+    <string name="main">activity_app</string>
 </resources>
