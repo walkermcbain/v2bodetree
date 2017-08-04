@@ -32,28 +32,30 @@ public class LockedActivity extends AppActivity{
         mDevicePolicyManager = (DevicePolicyManager)
                 getSystemService(Context.DEVICE_POLICY_SERVICE);
 
+
+        //Stop Lock Task Logic......add to view 5 pin
         // Setup stop lock task button
-        stopLockButton = (Button) findViewById(R.id.stop_lock_button);
-        stopLockButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ActivityManager am = (ActivityManager) getSystemService(
-                        Context.ACTIVITY_SERVICE);
+       // stopLockButton = (Button) findViewById(R.id.stop_lock_button);
+       // stopLockButton.setOnClickListener(new View.OnClickListener() {
+       //     @Override
+       //     public void onClick(View v) {
+       //         ActivityManager am = (ActivityManager) getSystemService(
+       //                 Context.ACTIVITY_SERVICE);
 
-                if (am.getLockTaskModeState() ==
-                        ActivityManager.LOCK_TASK_MODE_LOCKED) {
-                    stopLockTask();
-                }
+       //         if (am.getLockTaskModeState() ==
+       //                 ActivityManager.LOCK_TASK_MODE_LOCKED) {
+       //            stopLockTask();
+       //         }
 
-                setDefaultCosuPolicies(false);
+       //         setDefaultCosuPolicies(false);
 
-                Intent intent = new Intent(
-                        getApplicationContext(), AppActivity.class);
+       //         Intent intent = new Intent(
+       //                 getApplicationContext(), AppActivity.class);
 
-                startActivity(intent);
-                finish();
-            }
-        });
+       //         startActivity(intent);
+       //         finish();
+       //     }
+       // });
 
     }
 

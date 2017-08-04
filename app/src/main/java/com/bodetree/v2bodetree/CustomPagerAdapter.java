@@ -18,7 +18,7 @@ public class CustomPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup collection, int position) {
-        AppActivity.CustomPagerEnum customPagerEnum = AppActivity.CustomPagerEnum.values()[position];
+        mainactivity.CustomPagerEnum customPagerEnum = mainactivity.CustomPagerEnum.values()[position];
         LayoutInflater inflater = LayoutInflater.from(mContext);
         ViewGroup layout = (ViewGroup) inflater.inflate(customPagerEnum.getLayoutResId(), collection, false);
         collection.addView(layout);
@@ -32,7 +32,7 @@ public class CustomPagerAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return AppActivity.CustomPagerEnum.values().length;
+        return mainactivity.CustomPagerEnum.values().length;
     }
 
     @Override
@@ -42,7 +42,7 @@ public class CustomPagerAdapter extends PagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        AppActivity.CustomPagerEnum customPagerEnum = AppActivity.CustomPagerEnum.values()[position];
+        mainactivity.CustomPagerEnum customPagerEnum = mainactivity.CustomPagerEnum.values()[position];
         return mContext.getString(customPagerEnum.getTitleResId());
     }
 

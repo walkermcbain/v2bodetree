@@ -36,8 +36,7 @@ public class AppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        viewPager.setAdapter(new CustomPagerAdapter(this));
+
 
 // Retrieve Device Policy Manager so that we can check whether we can
 // lock to screen later
@@ -52,32 +51,7 @@ public class AppActivity extends AppCompatActivity {
         }
     }
 
-    public enum CustomPagerEnum {
 
-        Main(R.string.main, R.layout.activity_app),
-        VIDEO(R.string.video, R.layout.view2),
-        PICS(R.string.pics, R.layout.view3),
-        PDF(R.string.pdf, R.layout.view4),
-        PIN(R.string.pin, R.layout.view5);
-
-        private int mTitleResId;
-        private int mLayoutResId;
-
-        CustomPagerEnum(int titleResId, int layoutResId) {
-
-            mLayoutResId = layoutResId;
-            mTitleResId = titleResId;
-        }
-
-        public int getTitleResId() {
-            return mTitleResId;
-        }
-
-        public int getLayoutResId() {
-            return mLayoutResId;
-        }
-
-    }
 
     //correct button code!!!!!
     public void onButtonClicked(View view) {

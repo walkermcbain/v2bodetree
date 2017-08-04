@@ -14,6 +14,8 @@ public class view5 extends AppCompatActivity {
         setContentView(R.layout.view5);
     }
 
+
+
     @Override
     public void onBackPressed() {
 
