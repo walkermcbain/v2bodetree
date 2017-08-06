@@ -6,6 +6,7 @@ package com.bodetree.v2bodetree;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 import com.alimuzaffar.lib.pin.PinEntryEditText;
 
 
@@ -26,7 +27,7 @@ public class view5 extends AppCompatActivity {
                 public void onPinEntered(CharSequence str) {
                     if (str.toString().equals("1234")) {
                         Intent intent = new Intent(view5.this, lastpage.class);
-                         startActivity(intent);
+                        startActivity(intent);
                     } else {
                         pinEntry.setText(null);
                     }
