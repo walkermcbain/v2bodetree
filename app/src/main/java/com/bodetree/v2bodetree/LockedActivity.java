@@ -13,13 +13,17 @@ import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.provider.Settings;
+
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 
-public class LockedActivity extends AppActivity{
+public class LockedActivity extends AppCompatActivity{
 
-    public Button stopLockButton;
+    private EditText stopLockButton;
+    public EditText edittext = stopLockButton;
     private ComponentName mAdminComponentName;
     private DevicePolicyManager mDevicePolicyManager;
 
@@ -27,35 +31,37 @@ public class LockedActivity extends AppActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
 
         mDevicePolicyManager = (DevicePolicyManager)
                 getSystemService(Context.DEVICE_POLICY_SERVICE);
 
 
-        //Stop Lock Task Logic......add to view 5 pin
+        //Logic is Correct, need to save and call pin in view 5
         // Setup stop lock task button
-       // stopLockButton = (Button) findViewById(R.id.stop_lock_button);
-       // stopLockButton.setOnClickListener(new View.OnClickListener() {
-       //     @Override
-       //     public void onClick(View v) {
-       //         ActivityManager am = (ActivityManager) getSystemService(
-       //                 Context.ACTIVITY_SERVICE);
+        //stopLockButton = (EditText) findViewById(R.id.editText);
+        //stopLockButton.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View v) {
 
-       //         if (am.getLockTaskModeState() ==
-       //                 ActivityManager.LOCK_TASK_MODE_LOCKED) {
-       //            stopLockTask();
-       //         }
+        //        ActivityManager am = (ActivityManager) getSystemService(
+        //                Context.ACTIVITY_SERVICE);
 
-       //         setDefaultCosuPolicies(false);
+        //        if (am.getLockTaskModeState() ==
+        //                ActivityManager.LOCK_TASK_MODE_LOCKED) {
+        //           stopLockTask();
+        //        }
 
-       //         Intent intent = new Intent(
-       //                 getApplicationContext(), AppActivity.class);
+        //        setDefaultCosuPolicies(false);
 
-       //         startActivity(intent);
-       //         finish();
-       //     }
-       // });
+        //       Intent intent = new Intent(
+        //                getApplicationContext(), mainactivity.class);
+
+        //        startActivity(intent);
+        //        finish();
+        //    }
+        //});
 
     }
 
@@ -63,7 +69,6 @@ public class LockedActivity extends AppActivity{
     protected void onStart() {
         super.onStart();
 
-        // start lock task mode if its not already active
         if(mDevicePolicyManager.isLockTaskPermitted(this.getPackageName())){
             ActivityManager am = (ActivityManager) getSystemService(
                     Context.ACTIVITY_SERVICE);
@@ -91,6 +96,7 @@ public class LockedActivity extends AppActivity{
         setUserRestriction(UserManager.DISALLOW_ADJUST_VOLUME, active);
 
         // Disable keyguard and status bar
+
         mDevicePolicyManager.setKeyguardDisabled(mAdminComponentName, active);
         mDevicePolicyManager.setStatusBarDisabled(mAdminComponentName, active);
 

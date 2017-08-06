@@ -10,7 +10,6 @@ import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.UserManager;
 import android.provider.Settings;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +17,6 @@ import android.widget.Button;
 
 
 
-//make swipe
 //unlock with pin on last page
 //lock to screen..add device policy manager?
 
@@ -53,7 +51,7 @@ public class AppActivity extends AppCompatActivity {
 
 
 
-    //correct button code!!!!!
+    //remove button
     public void onButtonClicked(View view) {
         Intent intent = new Intent(this, view2.class);
         startActivity(intent);
@@ -66,8 +64,6 @@ public class AppActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
-// Consider locking your app here or by some other mechanism
-// Active Manager is supported on Android M
         if(mDevicePolicyManager.isLockTaskPermitted(this.getPackageName())){
             ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
             if (am.getLockTaskModeState() == ActivityManager.LOCK_TASK_MODE_NONE) {
@@ -76,10 +72,6 @@ public class AppActivity extends AppCompatActivity {
             }
         }
     }
-
-
-
-
 
 
 

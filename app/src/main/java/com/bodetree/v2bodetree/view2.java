@@ -17,11 +17,11 @@ public class view2 extends AppCompatActivity {
     }
 
 
-    public void onButtonClicked(View view){
-        Intent intent = new Intent(this, view3.class);
-        startActivity(intent);
+    //public void onButtonClicked(View view){
+    //    Intent intent = new Intent(this, view3.class);
+    //    startActivity(intent);
 
-    }
+    //}
 
     @Override
     public void onBackPressed() {
