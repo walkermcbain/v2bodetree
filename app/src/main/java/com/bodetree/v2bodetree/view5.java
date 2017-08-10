@@ -6,6 +6,7 @@ package com.bodetree.v2bodetree;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Toast;
 import com.alimuzaffar.lib.pin.PinEntryEditText;
 
@@ -36,6 +37,12 @@ public class view5 extends AppCompatActivity {
         }
 
     }
+
+    //public void onButtonClicked(View view){
+    //    Intent intent = new Intent(this, lastpage.class);
+    //    startActivity(intent);
+
+    //}
 
     @Override
     public void onBackPressed() {

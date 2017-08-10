@@ -10,6 +10,7 @@ import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.UserManager;
 import android.provider.Settings;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,8 +18,7 @@ import android.widget.Button;
 
 
 
-//unlock with pin on last page
-//lock to screen..add device policy manager?
+
 
 
 
@@ -48,16 +48,6 @@ public class AppActivity extends AppCompatActivity {
 
         }
     }
-
-
-
-    //remove button
-    public void onButtonClicked(View view) {
-        Intent intent = new Intent(this, view2.class);
-        startActivity(intent);
-
-    }
-
 
 
 
@@ -136,5 +126,7 @@ public class AppActivity extends AppCompatActivity {
             mDevicePolicyManager.setGlobalSetting(mAdminComponentName,Settings.Global.STAY_ON_WHILE_PLUGGED_IN,"0");
         }
     }
+
+
 }
 

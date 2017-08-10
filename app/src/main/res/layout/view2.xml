@@ -24,4 +24,13 @@
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onButtonClicked"
+        android:text="Button"
+        tools:layout_editor_absoluteX="270dp"
+        tools:layout_editor_absoluteY="499dp" />
+
 </android.support.constraint.ConstraintLayout>

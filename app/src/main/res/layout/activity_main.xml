@@ -8,10 +8,15 @@
 
   <android.support.v4.view.ViewPager
       android:id="@+id/viewpager"
-      xmlns:android="http://schemas.android.com/apk/res/android"
       android:layout_width="569dp"
       android:layout_height="794dp"
-      tools:layout_editor_absoluteY="16dp"
-      tools:layout_editor_absoluteX="16dp" />
+      android:layout_marginBottom="16dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginRight="16dp"
+      app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

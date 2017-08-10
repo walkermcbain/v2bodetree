@@ -35,9 +35,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-        <activity android:name=".view2"/>
-        <activity android:name=".view3"/>
-        <activity android:name=".view4"/>
+
         <activity android:name=".view5"></activity>
     </application>
 
