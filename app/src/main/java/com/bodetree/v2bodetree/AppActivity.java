@@ -19,7 +19,8 @@ import android.widget.Button;
 
 
 
-
+//graham this should be ok....check the connection to locked activity and lastpage
+//this is the main activity page
 
 
 public class AppActivity extends AppCompatActivity {
@@ -36,6 +37,7 @@ public class AppActivity extends AppCompatActivity {
 
 
 
+
 // Retrieve Device Policy Manager so that we can check whether we can
 // lock to screen later
         mAdminComponentName = new ComponentName(this,AppAdminReceiver.class);
@@ -47,6 +49,12 @@ public class AppActivity extends AppCompatActivity {
         else {
 
         }
+    }
+
+    public void onButtonClicked(View view){
+        Intent intent = new Intent(this, view2.class);
+        startActivity(intent);
+
     }
 
 
@@ -72,7 +80,7 @@ public class AppActivity extends AppCompatActivity {
 
 
 
-    private void setDefaultCosuPolicies(boolean active){
+    void setDefaultCosuPolicies(boolean active){
 
         // Set user restrictions
         setUserRestriction(UserManager.DISALLOW_SAFE_BOOT, active);

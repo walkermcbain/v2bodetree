@@ -31,14 +31,14 @@ public class LockedActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_app);
 
 
         mDevicePolicyManager = (DevicePolicyManager)
                 getSystemService(Context.DEVICE_POLICY_SERVICE);
 
 
-        //Logic is Correct, need to save and call pin in view 5
+
         // Setup stop lock task button
         //stopLockButton = (EditText) findViewById(R.id.editText);
         //stopLockButton.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +56,7 @@ public class LockedActivity extends AppCompatActivity{
         //        setDefaultCosuPolicies(false);
 
         //       Intent intent = new Intent(
-        //                getApplicationContext(), mainactivity.class);
+        //                getApplicationContext(), lastpage.class);
 
         //        startActivity(intent);
         //        finish();
@@ -81,12 +81,12 @@ public class LockedActivity extends AppCompatActivity{
     @Override
     protected void onStop(){
         super.onStop();
-        setContentView(R.layout.activity_app);
+        setContentView(R.layout.finalpage);
 
     }
 
 
-    private void setDefaultCosuPolicies(boolean active){
+    void setDefaultCosuPolicies(boolean active){
 
         // Set user restrictions
         setUserRestriction(UserManager.DISALLOW_SAFE_BOOT, active);

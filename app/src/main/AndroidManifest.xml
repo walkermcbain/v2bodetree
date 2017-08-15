@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".mainactivity"
+            android:name=".AppActivity"
             android:label="BODETREE">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -35,8 +35,11 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-
+        <activity android:name=".view2"></activity>
+        <activity android:name=".view3"></activity>
+        <activity android:name=".view4"></activity>
         <activity android:name=".view5"></activity>
+        <activity android:name=".lastpage"></activity>
     </application>
 
 </manifest>

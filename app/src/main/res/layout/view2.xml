@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:onClick="onButtonClicked"
         android:text="Button"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="499dp" />
+        tools:layout_editor_absoluteX="269dp"
+        tools:layout_editor_absoluteY="626dp" />
 
 </android.support.constraint.ConstraintLayout>
