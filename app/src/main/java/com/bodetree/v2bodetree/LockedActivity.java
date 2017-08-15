@@ -81,7 +81,7 @@ public class LockedActivity extends AppCompatActivity{
     @Override
     protected void onStop(){
         super.onStop();
-        setContentView(R.layout.finalpage);
+        setContentView(R.layout.lastpage);
 
     }
 
