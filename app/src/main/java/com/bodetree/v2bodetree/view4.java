@@ -5,23 +5,44 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.github.barteksc.pdfviewer.PDFView;
+
 
 
 public class view4 extends AppCompatActivity{
 
-    PDFView pdfView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view4);
 
-        pdfView = (PDFView)findViewById(R.id.pdfView);
-        pdfView.fromAsset("City Wide 2017 MULTI STATE Unit FDD v2.pdf").load();
+    }
 
+    public void onClick(View view){
+        Intent intent = new Intent(this, viewpdf1.class);
+        startActivity(intent);
 
     }
+
+    public void onClicked(View view){
+        Intent intent = new Intent(this, viewpdf2.class);
+        startActivity(intent);
+
+    }
+
+    public void onButton(View view){
+        Intent intent = new Intent(this, viewpdf3.class);
+        startActivity(intent);
+
+    }
+
+    public void onButtonClick(View view){
+        Intent intent = new Intent(this, viewpdf4.class);
+        startActivity(intent);
+
+    }
+
 
     public void onButtonClicked(View view){
         Intent intent = new Intent(this, view5.class);
