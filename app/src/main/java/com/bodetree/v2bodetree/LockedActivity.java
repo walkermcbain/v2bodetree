@@ -22,8 +22,7 @@ import android.widget.EditText;
 
 public class LockedActivity extends AppCompatActivity{
 
-    private EditText stopLockButton;
-    public EditText edittext = stopLockButton;
+    private Button stopLockButton;
     private ComponentName mAdminComponentName;
     private DevicePolicyManager mDevicePolicyManager;
 
@@ -38,30 +37,28 @@ public class LockedActivity extends AppCompatActivity{
                 getSystemService(Context.DEVICE_POLICY_SERVICE);
 
 
+        stopLockButton = (Button) findViewById(R.id.stop_lock_button);
+        stopLockButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        // Setup stop lock task button
-        //stopLockButton = (EditText) findViewById(R.id.editText);
-        //stopLockButton.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View v) {
+                ActivityManager am = (ActivityManager) getSystemService(
+                        Context.ACTIVITY_SERVICE);
 
-        //        ActivityManager am = (ActivityManager) getSystemService(
-        //                Context.ACTIVITY_SERVICE);
+                if (am.getLockTaskModeState() ==
+                        ActivityManager.LOCK_TASK_MODE_LOCKED) {
+                   stopLockTask();
+                }
 
-        //        if (am.getLockTaskModeState() ==
-        //                ActivityManager.LOCK_TASK_MODE_LOCKED) {
-        //           stopLockTask();
-        //        }
+                setDefaultCosuPolicies(false);
 
-        //        setDefaultCosuPolicies(false);
+               Intent intent = new Intent(
+                        getApplicationContext(), lastpage.class);
 
-        //       Intent intent = new Intent(
-        //                getApplicationContext(), lastpage.class);
-
-        //        startActivity(intent);
-        //        finish();
-        //    }
-        //});
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
 
