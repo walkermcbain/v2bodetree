@@ -59,7 +59,7 @@ public class LockedActivity extends AppCompatActivity{
                 finish();
             }
         });
-
+//
     }
 
     @Override

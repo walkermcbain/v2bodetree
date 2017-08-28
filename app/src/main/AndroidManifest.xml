@@ -6,14 +6,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/citywideicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/citywideicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".AppActivity"
-            android:label="BODETREE">
+            android:label="CityWide">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,7 +26,7 @@
         <receiver
             android:name=".AppAdminReceiver"
             android:description="@string/app_name"
-            android:label="@string/app_name"
+            android:label=""
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
@@ -37,15 +37,29 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-        <activity android:name=".view2"></activity>
-        <activity android:name=".view3"></activity>
-        <activity android:name=".view4"></activity>
-        <activity android:name=".view5"></activity>
-        <activity android:name=".lastpage"></activity>
-        <activity android:name=".viewpdf1"></activity>
-        <activity android:name=".viewpdf2"></activity>
-        <activity android:name=".viewpdf3"></activity>
-        <activity android:name=".viewpdf4"></activity>
+        <activity android:name=".view2"
+            android:label="CityWide">
+        </activity>
+        <activity android:name=".view3"
+            android:label="CityWide">
+        </activity>
+        <activity android:name=".view4"
+            android:label="CityWide">
+        </activity>
+        <activity android:name=".view5"
+            android:label="CityWide">
+        </activity>
+        <activity android:name=".lastpage"
+            android:label="CityWide">
+        </activity>
+        <activity android:name=".viewpdf1"
+            android:label="CityWide 2017 MULTI STATE Unit FDD"></activity>
+        <activity android:name=".viewpdf2"
+            android:label="CityWide Educatio Process"></activity>
+        <activity android:name=".viewpdf3"
+            android:label="CityWide Franchise Performance Team Guide"></activity>
+        <activity android:name=".viewpdf4"
+            android:label="Yearbook May 2017"></activity>
         <activity android:name=".FullImageActivity"></activity>
     </application>
 

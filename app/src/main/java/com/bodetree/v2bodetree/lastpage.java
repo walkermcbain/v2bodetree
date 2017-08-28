@@ -3,11 +3,18 @@ package com.bodetree.v2bodetree;
 
 
 
+import android.app.ActivityManager;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 
+public class lastpage extends AppCompatActivity {
 
-public class lastpage extends LockedActivity{
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,7 +22,27 @@ public class lastpage extends LockedActivity{
 
     }
 
+    public void onButtonClick(View view){
 
+        ActivityManager am = (ActivityManager) getSystemService(
+                Context.ACTIVITY_SERVICE);
+
+        if (am.getLockTaskModeState() ==
+                ActivityManager.LOCK_TASK_MODE_LOCKED) {
+            stopLockTask();
+        }
+
+
+        Intent intent = new Intent(this, lastpage.class);
+        startActivity(intent);
+        finish();
+
+    }
 
 
 }
+
+
+
+
+

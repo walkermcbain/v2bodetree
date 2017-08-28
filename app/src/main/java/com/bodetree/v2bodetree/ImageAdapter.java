@@ -15,7 +15,7 @@ public class ImageAdapter extends BaseAdapter {
     private Context mContext;
 
     // Keep all Images in array
-    public Integer[] mThumbIds = {
+    public Integer[] mImages = {
             R.drawable.citywide_1,
             R.drawable.citywide_2,
             R.drawable.citywide_3,
@@ -29,12 +29,12 @@ public class ImageAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return mThumbIds.length;
+        return mImages.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return mThumbIds[position];
+        return mImages[position];
     }
 
     @Override
@@ -45,9 +45,9 @@ public class ImageAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView = new ImageView(mContext);
-        imageView.setImageResource(mThumbIds[position]);
+        imageView.setImageResource(mImages[position]);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setLayoutParams(new GridView.LayoutParams(70, 70));
+        imageView.setLayoutParams(new GridView.LayoutParams(250, 200));
         return imageView;
     }
 
