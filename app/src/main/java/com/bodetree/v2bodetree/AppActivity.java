@@ -19,9 +19,6 @@ import android.widget.Button;
 
 
 
-//graham this should be ok....check the connection to locked activity and lastpage
-//this is the main activity page
-
 
 public class AppActivity extends AppCompatActivity {
 
@@ -35,9 +32,6 @@ public class AppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
 
-
-
-
 // Retrieve Device Policy Manager so that we can check whether we can
 // lock to screen later
         mAdminComponentName = new ComponentName(this,AppAdminReceiver.class);
@@ -49,29 +43,27 @@ public class AppActivity extends AppCompatActivity {
         else {
 
         }
+
+
+        //protected void onStart(){
+            super.onStart();
+            if(mDevicePolicyManager.isLockTaskPermitted(this.getPackageName())){
+                ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+                if (am.getLockTaskModeState() == ActivityManager.LOCK_TASK_MODE_NONE) {
+                    setDefaultCosuPolicies(true);
+                    startLockTask();
+                }
+            }
+        //}
     }
+
+
 
     public void onButtonClicked(View view){
         Intent intent = new Intent(this, view2.class);
         startActivity(intent);
 
     }
-
-
-
-    @Override
-    protected void onStart(){
-        super.onStart();
-        if(mDevicePolicyManager.isLockTaskPermitted(this.getPackageName())){
-            ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-            if (am.getLockTaskModeState() == ActivityManager.LOCK_TASK_MODE_NONE) {
-                setDefaultCosuPolicies(true);
-                startLockTask();
-            }
-        }
-    }
-
-
 
     @Override
     public void onBackPressed() {
