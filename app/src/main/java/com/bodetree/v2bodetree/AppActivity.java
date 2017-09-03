@@ -43,18 +43,18 @@ public class AppActivity extends AppCompatActivity {
         else {
 
         }
+    }
 
-
-        //protected void onStart(){
+    @Override
+    protected void onStart(){
             super.onStart();
             if(mDevicePolicyManager.isLockTaskPermitted(this.getPackageName())){
-                ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-                if (am.getLockTaskModeState() == ActivityManager.LOCK_TASK_MODE_NONE) {
-                    setDefaultCosuPolicies(true);
-                    startLockTask();
-                }
-            }
-        //}
+        ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        if (am.getLockTaskModeState() == ActivityManager.LOCK_TASK_MODE_NONE) {
+            setDefaultCosuPolicies(true);
+            startLockTask();
+        }
+    }
     }
 
 

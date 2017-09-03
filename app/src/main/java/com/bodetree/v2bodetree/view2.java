@@ -1,10 +1,12 @@
 package com.bodetree.v2bodetree;
 
+import android.app.KeyguardManager;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.MediaController;
 import android.app.ProgressDialog;
 import android.media.MediaPlayer.OnPreparedListener;
