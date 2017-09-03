@@ -1,23 +1,19 @@
 package com.bodetree.v2bodetree;
 
 import android.app.ActivityManager;
-import android.app.admin.DeviceAdminReceiver;
 import android.app.admin.DevicePolicyManager;
 import android.app.admin.SystemUpdatePolicy;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.provider.Settings;
 
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 
 public class LockedActivity extends AppCompatActivity{
@@ -37,28 +33,28 @@ public class LockedActivity extends AppCompatActivity{
                 getSystemService(Context.DEVICE_POLICY_SERVICE);
 
 
-        stopLockButton = (Button) findViewById(R.id.stop_lock_button);
-        stopLockButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                ActivityManager am = (ActivityManager) getSystemService(
-                        Context.ACTIVITY_SERVICE);
-
-                if (am.getLockTaskModeState() ==
-                        ActivityManager.LOCK_TASK_MODE_LOCKED) {
-                   stopLockTask();
-                }
-
-                setDefaultCosuPolicies(false);
-
-               Intent intent = new Intent(
-                        getApplicationContext(), lastpage.class);
-
-                startActivity(intent);
-                finish();
-            }
-        });
+//        stopLockButton = (Button) findViewById(R.id.stop_lock_button);
+//        stopLockButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                ActivityManager am = (ActivityManager) getSystemService(
+//                        Context.ACTIVITY_SERVICE);
+//
+//                if (am.getLockTaskModeState() ==
+//                        ActivityManager.LOCK_TASK_MODE_LOCKED) {
+//                   stopLockTask();
+//                }
+//
+//                setDefaultCosuPolicies(false);
+//
+//               Intent intent = new Intent(
+//                        getApplicationContext(), lastpage.class);
+//
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
 //
     }
 
@@ -78,7 +74,7 @@ public class LockedActivity extends AppCompatActivity{
     @Override
     protected void onStop(){
         super.onStop();
-        setContentView(R.layout.lastpage);
+        setContentView(R.layout.activity_app);
 
     }
 

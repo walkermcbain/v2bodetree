@@ -33,7 +33,7 @@ public class lastpage extends AppCompatActivity {
         }
 
 
-        Intent intent = new Intent(this, lastpage.class);
+        Intent intent = new Intent(this, AppActivity.class);
         startActivity(intent);
         finish();
 

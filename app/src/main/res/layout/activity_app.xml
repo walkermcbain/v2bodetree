@@ -14,6 +14,7 @@
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:background="#A33038"
         android:elevation="4dp"
         android:onClick="onButtonClicked"
         android:text="Begin"
