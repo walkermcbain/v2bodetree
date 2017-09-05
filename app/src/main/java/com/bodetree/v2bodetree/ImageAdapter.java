@@ -7,9 +7,7 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-/**
- * Created by walkermcbain on 8/25/17.
- */
+
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;

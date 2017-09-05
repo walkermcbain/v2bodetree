@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-/**
- * Created by walkermcbain on 8/25/17.
- */
+
 
 public class FullImageActivity extends Activity {
 

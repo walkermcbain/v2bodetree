@@ -54,27 +54,6 @@ public class lastpage extends AppActivity {
 
     }
 
-//    public void onButtonClick(View view){
-//
-//        mDevicePolicyManager = (DevicePolicyManager)
-//               getSystemService(Context.DEVICE_POLICY_SERVICE);
-//
-//        ActivityManager am = (ActivityManager) getSystemService(
-//                Context.ACTIVITY_SERVICE);
-//
-//        if (am.getLockTaskModeState() ==
-//                ActivityManager.LOCK_TASK_MODE_LOCKED) {
-//            stopLockTask();
-//        }
-//
-//        setDefaultCosuPolicies(false);
-//
-//
-//        Intent intent = new Intent(this, lastpage.class);
-//        startActivity(intent);
-//        finish();
-//
-//    }
 
 }
 

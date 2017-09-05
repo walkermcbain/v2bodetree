@@ -4,7 +4,6 @@ package com.bodetree.v2bodetree;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
@@ -38,11 +37,6 @@ public class view3  extends AppActivity{
                 startActivity(i);
             }
         });
-
-
-
-
-
 
     }
 
